@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router';
+import { useCart } from './CartContext.jsx';
 import { Input } from 'antd';
 import SearchBar from './InPut.jsx';
-import { useCart } from './CartContext.jsx';
 import ProductCost from './ProductCost.jsx';
 import { useState } from 'react';
 const Header = ({ products }) => {
+    const { cart, totalQuantity, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
     const product = products;
     const [selectedProduct, setSelectedProduct] = useState(null);
     const handleSelect = (product) => {
@@ -32,6 +33,17 @@ const Header = ({ products }) => {
                 <div className="w-64">
                     <SearchBar products={product} onSelect={handleSelect} />
                 </div>
+            </div>
+            <div
+                className="relative cursor-pointer"
+                onClick={() => setOpenCart(!openCart)}
+            >
+                🛒
+                {totalQuantity > 0 && (
+                    <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                        {totalQuantity}
+                    </span>
+                )}
             </div>
         </header>
     );
