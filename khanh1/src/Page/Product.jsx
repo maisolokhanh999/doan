@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import ProductCost from '../Components/productcost';
+import ProductCost from '../Components/ProductCost.jsx';
 import './Product.css';
 const Product = () => {
   const [products, setProducts] = useState([]);

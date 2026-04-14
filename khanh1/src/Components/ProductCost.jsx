@@ -1,21 +1,12 @@
 import { useState } from 'react';
+import { useCart } from './CartContext.jsx';
 
 const ProductCost = ({ product, onBack }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
-  const addToCart = () => {
-    const cartItem = {
-      ...product,
-      quantity: parseInt(quantity) || 1
-    };
-    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const existingIndex = cart.findIndex(item => item.id === product.id);
-    if (existingIndex !== -1) {
-      cart[existingIndex].quantity += cartItem.quantity;
-    } else {
-      cart.push(cartItem);
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
+  const handleAddToCart = () => {
+    addToCart(product, parseInt(quantity, 10) || 1);
     alert(`Added ${quantity} ${product.title} to the cart!`);
   };
 
@@ -82,7 +73,7 @@ const ProductCost = ({ product, onBack }) => {
               </div>
 
               <button
-                onClick={addToCart}
+                onClick={handleAddToCart}
                 className="w-full py-5 px-8 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 🛒 Add to cart
