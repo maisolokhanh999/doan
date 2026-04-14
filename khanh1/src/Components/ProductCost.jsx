@@ -55,7 +55,7 @@ const ProductCost = ({ product, onBack }) => {
                 </div>
 
                 <div className="space-y-4">
-                  <label className="block text-xl font-semibold mb-3">Số lượng:</label>
+                  <label className="block text-xl font-semibold mb-3">quantity:</label>
                   <div className="flex space-x-4">
                     <button
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
