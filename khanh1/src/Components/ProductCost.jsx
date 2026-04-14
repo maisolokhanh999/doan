@@ -16,7 +16,7 @@ const ProductCost = ({ product, onBack }) => {
       cart.push(cartItem);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`Đã thêm ${quantity} ${product.title} vào giỏ hàng!`);
+    alert(`Added ${quantity} ${product.title} to the cart!`);
   };
 
   return (
