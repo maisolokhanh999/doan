@@ -79,7 +79,7 @@ const ProductCost = ({ product, onBack }) => {
                     </button>
                   </div>
                 </div>
-              </div>;
+              </div>
 
               <button
                 onClick={addToCart}
