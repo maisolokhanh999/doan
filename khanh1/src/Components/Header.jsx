@@ -1,6 +1,23 @@
 import { NavLink } from 'react-router';
 import { Input } from 'antd';
-const Header = () => {
+import SearchBar from './InPut.jsx';
+import { useCart } from './CartContext.jsx';
+import ProductCost from './ProductCost.jsx';
+import { useState } from 'react';
+const Header = ({ products }) => {
+    const product = products;
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const handleSelect = (product) => {
+        setSelectedProduct(product);
+    };
+    if (selectedProduct) {
+        return (
+            <ProductCost
+                product={selectedProduct}
+                onBack={() => setSelectedProduct(null)}
+            />
+        );
+    }
     return (
         <header className="bg-amber-200 py-4">
             <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
@@ -13,7 +30,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="w-64">
-                    <Input placeholder="Search..." />
+                    <SearchBar products={product} onSelect={handleSelect} />
                 </div>
             </div>
         </header>

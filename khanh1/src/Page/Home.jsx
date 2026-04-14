@@ -4,10 +4,10 @@ import Product from './Product';
 import ServicePackage from './ServicePackage';
 
 import './Home.css';
-const Home = () => {
+const Home = ({ products }) => {
     return (
         <div className="home-container">
-          <Product />
+  <Product products={products} />
           <ServicePackage />
         </div>
     );

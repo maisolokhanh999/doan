@@ -49,7 +49,7 @@ const ProductCost = ({ product, onBack }) => {
                   <label className="block text-xl font-semibold mb-3">quantity:</label>
                   <div className="flex space-x-4">
                     <button
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      onClick={() => setQuantity(Math.max(0, quantity - 1))}
                       className="w-14 h-14 bg-gray-200 rounded-xl hover:bg-gray-300 transition-colors font-bold text-lg"
                     >
                       -
@@ -57,9 +57,9 @@ const ProductCost = ({ product, onBack }) => {
                     <input
                       type="number"
                       value={quantity}
-                      onChange={(e) => setQuantity(Math.max(1, Math.min(product.stock, parseInt(e.target.value) || 1)))}
+                      onChange={(e) => setQuantity(Math.max(0, Math.min(product.stock, parseInt(e.target.value) || 0)))}
                       className="w-24 text-center p-3 text-2xl font-bold border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
-                      min="1"
+                      min="0"
                       max={product.stock}
                     />
                     <button

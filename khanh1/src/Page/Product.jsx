@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ProductCost from '../Components/ProductCost.jsx';
 import './Product.css';
-const Product = () => {
-  const [products, setProducts] = useState([]);
+const Product = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const productRef = useRef(null);
@@ -21,16 +20,11 @@ const Product = () => {
 
     return () => clearTimeout(timer);
   }, [selectedCategory]);
-  useEffect(() => {
-    fetch("https://dummyjson.com/products")
-      .then(res => res.json())
-      .then(data => setProducts(data.products))
-      .catch(err => console.log(err));
-  }, []);
+ 
 
   const categories = [
-    ...new Set(products.map(p => p.category))
-  ];
+  ...new Set((products || []).map(p => p.category))
+];
 
   const selectProduct = (product) => {
     setSelectedProduct(product);
@@ -44,13 +38,14 @@ const Product = () => {
     );
   }
 
+  const safeProducts = products || [];
   const filteredProducts = selectedCategory
-    ? products.filter(item =>
+    ? safeProducts.filter(item =>
       typeof selectedCategory === "string"
         ? item.category === selectedCategory
         : item.category === selectedCategory.slug
     )
-    : products;
+    : safeProducts;
   return (
     <div className="product-container">
       <div className="max-w-7xl mx-auto p-6">

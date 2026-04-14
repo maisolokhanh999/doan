@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const value = useMemo(() => {
-    const addToCart = (product, quantity = 1) => {
+    const addToCart = (product, quantity = 0) => {
       const qty = Number.isFinite(quantity) ? quantity : parseInt(quantity, 10) || 1;
       dispatch({
         type: 'ADD_ITEM',
