@@ -10,6 +10,7 @@ import NotFound from './Page/NotFound';
 import SignUp from './Components/SignUp';
 import { useState, useEffect } from 'react';
 import ProductCostWrapper from './Components/ProductCostWrapper';
+import ShoppingCart from './Components/ShoppingCart.jsx';
 function App() {
   const [products, setProducts] = useState([]);
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/product/:id" element={<ProductCostWrapper products={products} />} />
+           <Route path="/ShoppingCart" element={<ShoppingCart />} />
         </Routes>
       </main>
       <Footer />

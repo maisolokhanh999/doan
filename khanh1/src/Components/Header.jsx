@@ -1,11 +1,11 @@
-import { NavLink } from 'react-router';
+import { NavLink,useNavigate} from 'react-router';
 import { useCart } from './CartContext.jsx';
-import { Input } from 'antd';
 import SearchBar from './InPut.jsx';
 import ProductCost from './ProductCost.jsx';
 import { useState } from 'react';
 import ShoppingCart from './ShoppingCart.jsx';
 const Header = ({ products }) => {
+    const navigate = useNavigate();
     const { totalQuantity, } = useCart();
     const [openCart, setOpenCart] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -51,8 +51,8 @@ const Header = ({ products }) => {
 
                     <div className="relative">
                         <div
-                            className="cursor-pointer text-xl"
-                            onClick={() => setOpenCart(!openCart)}
+                            className="cursor-pointer text-xl relative"
+                            onClick={() => navigate("/ShoppingCart")}
                         >
                             🛒
                             {totalQuantity > 0 && (
@@ -61,13 +61,6 @@ const Header = ({ products }) => {
                                 </span>
                             )}
                         </div>
-
-                        {/* DROPDOWN CART */}
-                        {openCart && (
-                            <div className="absolute right-0 mt-3 w-[400px] bg-white shadow-lg rounded-lg p-3 z-50">
-                                <ShoppingCart />
-                            </div>
-                        )}
                     </div>
                 </div>
             </header>

@@ -1,5 +1,8 @@
 import { useCart } from "./CartContext.jsx";
-
+import "./ShoppingCart.css";
+import { message } from "antd";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 const ShoppingCart = () => {
   const {
     cart,
@@ -10,23 +13,23 @@ const ShoppingCart = () => {
     clearCart,
     totalQuantity,
   } = useCart();
-
+   const navigate = useNavigate();
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
 
-  if (cart.length === 0) {
-    return (
-      <div className="p-5 text-center">
-        <h2 className="text-xl font-bold">🛒 Giỏ hàng trống</h2>
-      </div>
-    );
-  }
+
+  useEffect(() => {
+    if (cart.length === 0) {
+      message.warning("Shopping cart is empty!");
+      navigate("/");
+    }
+  }, [cart]);
 
   return (
-    <div className="p-5 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-5">🛒 Giỏ hàng</h2>
+    <div className="ShoppingCart-container poppins-semibold ">
+      <h2 className="text-2xl font- mb-5">🛒 Shopping cart</h2>
 
       {/* LIST PRODUCT */}
       {cart.map((item) => (
