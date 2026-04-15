@@ -1,0 +1,237 @@
+{
+  "sidebar": {
+    "brand_title": "Velvet Bloom",
+    "brand_subtitle": "Thánh Địa Kỹ Thuật Số",
+    "dashboard": "Bảng Điều Khiển",
+    "appointments": "Lịch Hẹn",
+    "services": "Dịch Vụ",
+    "products": "Sản Phẩm",
+    "staff": "Nhân Viên",
+    "book_appointment": "Đặt Lịch Hẹn",
+    "help_center": "Trung Tâm Hỗ Trợ",
+    "sign_out": "Đăng Xuất",
+    "orders": "Đơn Hàng"
+  },
+  "topbar": {
+    "brand_title": "Velvet Bloom",
+    "search_placeholder": "Tìm kiếm..."
+  },
+  "common": {
+    "language": "Ngôn Ngữ",
+    "english": "English",
+    "vietnamese": "Tiếng Việt"
+  },
+  "dashboard": {
+    "welcome_title": "Chào Buổi Sáng, Elena",
+    "welcome_subtitle": "Thánh địa của bạn hôm nay phồn vinh. Bạn có 12 lịch hẹn đã đặt.",
+    "metrics": {
+      "total_appointments": "Tổng Số Lịch Hẹn",
+      "appointments_trend": "Tháng này so với tháng trước",
+      "monthly_revenue": "Doanh Thu Tháng",
+      "revenue_trend": "Dự báo xu hướng: Ổn định",
+      "new_customers": "Khách Hàng Mới",
+      "customers_trend": "Đăng ký mới trong tuần này"
+    },
+    "appointments": {
+      "title": "Lịch Hẹn Hôm Nay",
+      "view_all": "Xem Lịch Trình",
+      "cols": {
+        "time": "Thời Gian",
+        "client": "Tên Khách",
+        "service": "Dịch Vụ",
+        "staff": "Nhân Viên",
+        "status": "Trạng Thái",
+        "action": "Hành Động"
+      },
+      "status_confirmed": "Đã Xác Nhận",
+      "status_progress": "Đang Thực Hiện",
+      "status_pending": "Chờ Xử Lý",
+      "status_completed": "Hoàn Thành"
+    },
+    "promo": {
+      "badge": "Xu Hướng",
+      "title": "Liệu pháp hương thơm hoa oải hương đang nổi bật tuần này.",
+      "desc": "Cân nhắc cung cấp gói dịch vụ cho khách hàng thường xuyên để tăng tỷ lệ giữ chân lên 15%.",
+      "btn": "Tạo Chiến Dịch"
+    },
+    "charts": {
+      "title": "Phân Bổ Dịch Vụ",
+      "massage": "Liệu Pháp Massage",
+      "facial": "Chăm Sóc Da Mặt",
+      "stone": "Liệu Pháp Đá Nóng"
+    }
+  },
+  "appointments": {
+    "title": "Lịch Hẹn",
+    "subtitle": "Quản lý dòng chảy thánh địa của bạn ngày hôm nay.",
+    "new_appointment": "Lịch Hẹn Mới",
+    "calendar_title": "Tháng 9 2024",
+    "days": {
+      "mon": "T2",
+      "tue": "T3",
+      "wed": "T4",
+      "thu": "T5",
+      "fri": "T6",
+      "sat": "T7",
+      "sun": "CN"
+    },
+    "table": {
+      "time": "Thời Gian",
+      "client": "Khách Hàng",
+      "service": "Dịch Vụ",
+      "specialist": "Chuyên Viên",
+      "status": "Trạng Thái"
+    },
+    "client_types": {
+      "first_time": "Khách lần đầu",
+      "vip": "Thành viên VIP",
+      "regular": "Khách thường xuyên",
+      "referred": "Được giới thiệu"
+    },
+    "duration_mins": "phút",
+    "status": {
+      "confirmed": "Đã xác nhận",
+      "pending": "Chờ xử lý",
+      "completed": "Hoàn thành"
+    },
+    "view_all": "Xem tất cả lịch hẹn",
+    "stats": {
+      "capacity_label": "Công Suất Hôm Nay",
+      "capacity_meta": "+12% so với thứ 4 trước",
+      "pending_label": "Yêu Cầu Chờ Xử Lý",
+      "pending_meta": "Chờ trung bình: 2h",
+      "staff_label": "Nhân Lực Sẵn Sàng",
+      "staff_meta": "Chuyên viên đang trực"
+    },
+    "form": {
+      "client_name": "Tên Khách Hàng",
+      "time": "Thời Gian (VD: 10:00 AM)",
+      "duration": "Thời Lượng (phút)",
+      "service_name": "Tên Dịch Vụ",
+      "specialist_name": "Nhân Viên Chuyên Trách",
+      "cancel": "Hủy",
+      "add_btn": "Thêm Lịch Hẹn"
+    }
+  },
+  "services": {
+    "page_subtitle": "Dịch Vụ Tuyển Chọn",
+    "page_title": "Quản Lý Dịch Vụ",
+    "add_new": "Thêm Dịch Vụ Mới",
+    "stats": {
+      "active": "Dịch Vụ Đang Kích Hoạt",
+      "avg_price": "Giá Trung Bình",
+      "categories": "Danh Mục"
+    },
+    "categories": {
+      "facial": "Chăm Sóc Da Mặt",
+      "massage": "Massage",
+      "body": "Trị Liệu Cơ Thể"
+    },
+    "meta": {
+      "duration": "phút",
+      "bestseller": "Bán chạy nhất",
+      "premium": "Cao cấp",
+      "draft": "Bản Nháp",
+      "highly_rated": "Đánh giá cao",
+      "luxury": "Sang trọng"
+    },
+    "add_card": {
+      "title": "Dịch Vụ Mới Khác",
+      "desc": "Thêm một dịch vụ massage riêng biệt"
+    },
+    "footer": {
+      "text": "Hiển thị 7 trong 24 dịch vụ đang kích hoạt trên 3 danh mục.",
+      "export": "Xuất Danh Mục",
+      "bulk": "Hiển Thị Hàng Loạt"
+    },
+    "edit_service": "Sửa Dịch Vụ",
+    "confirm_delete": "Bạn có chắc chắn muốn xóa dịch vụ này?",
+    "form": {
+      "title": "Tên Dịch Vụ",
+      "desc": "Mô Tả",
+      "image": "Hình Ảnh (URL)",
+      "price": "Giá ($)",
+      "duration": "Thời Lượng (phút)",
+      "category": "Danh Mục",
+      "status": "Trạng Thái",
+      "badge": "Nhãn (Ví dụ: bestseller)",
+      "cancel": "Hủy",
+      "add_btn": "Thêm",
+      "save_btn": "Lưu"
+    }
+  },
+  "staff": {
+    "page_title": "Tập Thể",
+    "page_subtitle": "Nuôi dưỡng trái tim của Velvet Bloom. Quản lý đội ngũ chuyên gia và nghệ nhân chăm sóc sức khỏe tâm huyết của bạn.",
+    "add_member": "Thêm Nhân Viên",
+    "stats": {
+      "active": "Chuyên Viên Hoạt Động",
+      "active_meta": "+2 Tháng Này",
+      "rating": "Đánh Giá Đội Ngũ",
+      "on_shift": "Đang Trực Hôm Nay"
+    },
+    "directory": {
+      "title": "Danh Bạ Nhân Viên",
+      "filter_all": "Tất Cả",
+      "filter_therapists": "Nhà Trị Liệu",
+      "filter_technicians": "Kỹ Thuật Viên"
+    },
+    "card": {
+      "shift_on": "Đang Trực",
+      "shift_break": "Đang Nghỉ",
+      "shift_off": "Nghỉ Phép",
+      "see_schedule": "Xem Lịch",
+      "details": "Chi Tiết"
+    },
+    "performance": {
+      "title": "Động Lực Đội Ngũ",
+      "desc": "Chỉ số hiệu suất của tập thể trong 30 ngày qua.",
+      "star_performer": "Ngôi Sao Nổi Bật",
+      "star_bookings": "114 Lịch Đặt tháng này",
+      "efficiency": "Hiệu Suất",
+      "view_data": "Xem Dữ Liệu Hiệu Suất"
+    },
+    "form": {
+      "name": "Họ Tên",
+      "role": "Vị Trí",
+      "skills": "Kỹ Năng (cách nhau bởi dấu phẩy)",
+      "avatar": "Link Ảnh (VD: /img/6461739.jpg)",
+      "shift_on": "Trong Ca",
+      "shift_off": "Nghỉ Phép",
+      "shift_break": "Đang Nghỉ",
+      "cancel": "Hủy",
+      "add_btn": "Thêm Nhân Viên"
+    }
+  },
+  "products": {
+    "page_title": "Kho Hàng & Sản Phẩm",
+    "page_subtitle": "Quản lý danh mục sản phẩm spa độc quyền và hàng tồn kho.",
+    "add_product": "Thêm Sản Phẩm",
+    "stats": {
+      "total": "Tổng Số",
+      "categories": "Danh Mục",
+      "low_stock": "Sắp Hết"
+    },
+    "card": {
+      "brand": "Thương Hiệu",
+      "category": "Danh Mục",
+      "price": "Giá",
+      "rating": "Đánh Giá",
+      "stock": "Tồn Kho",
+      "add_cart": "Thêm Giỏ Hàng",
+      "details": "Chi Tiết"
+    },
+    "edit_product": "Sửa Sản Phẩm",
+    "confirm_delete": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+    "form": {
+      "title": "Tên sản phẩm",
+      "desc": "Mô tả",
+      "image": "Link ảnh (Thumbnail URL)",
+      "price": "Giá",
+      "stock": "Tồn kho",
+      "cancel": "Hủy",
+      "add_btn": "Thêm",
+      "save_btn": "Lưu"
+    }
+  }
+}
