@@ -62,31 +62,31 @@ export const CartProvider = ({ children }) => {
 
     const removeFromCart = (id) => dispatch({ type: 'REMOVE_ITEM', payload: { id } });
     const increaseQuantity = (id) => {
-  const item = cart.find(i => i.id === id);
-  if (item) {
-    dispatch({
-      type: 'SET_QUANTITY',
-      payload: { id, quantity: item.quantity + 1 },
-    });
-  }
-};
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        dispatch({
+          type: 'SET_QUANTITY',
+          payload: { id, quantity: item.quantity + 1 },
+        });
+      }
+    };
 
-const decreaseQuantity = (id) => {
-  const item = cart.find(i => i.id === id);
-  if (item) {
-    dispatch({
-      type: 'SET_QUANTITY',
-      payload: { id, quantity: item.quantity - 1 },
-    });
-  }
-};
+    const decreaseQuantity = (id) => {
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        dispatch({
+          type: 'SET_QUANTITY',
+          payload: { id, quantity: item.quantity - 1 },
+        });
+      }
+    };
 
     const setQuantity = (id, quantity) =>
       dispatch({ type: 'SET_QUANTITY', payload: { id, quantity } });
 
     const clearCart = () => dispatch({ type: 'CLEAR_CART' });
     const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-    return { cart, dispatch, addToCart, removeFromCart, setQuantity, clearCart , increaseQuantity, decreaseQuantity, totalQuantity };
+    return { cart, dispatch, addToCart, removeFromCart, setQuantity, clearCart, increaseQuantity, decreaseQuantity, totalQuantity };
   }, [cart]);
 
   return (

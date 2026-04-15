@@ -4,8 +4,9 @@ import { Input } from 'antd';
 import SearchBar from './InPut.jsx';
 import ProductCost from './ProductCost.jsx';
 import { useState } from 'react';
+import ShoppingCart from './ShoppingCart.jsx';
 const Header = ({ products }) => {
-    const { cart, totalQuantity, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+    const { totalQuantity, } = useCart();
     const [openCart, setOpenCart] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const handleSelect = (product) => {
@@ -48,16 +49,24 @@ const Header = ({ products }) => {
                         <SearchBar products={products} onSelect={handleSelect} />
                     </div>
 
-                    {/* 🛒 CART */}
-                    <div
-                        className="relative cursor-pointer"
-                        onClick={() => setOpenCart(!openCart)}
-                    >
-                        🛒
-                        {totalQuantity > 0 && (
-                            <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                                {totalQuantity}
-                            </span>
+                    <div className="relative">
+                        <div
+                            className="cursor-pointer text-xl"
+                            onClick={() => setOpenCart(!openCart)}
+                        >
+                            🛒
+                            {totalQuantity > 0 && (
+                                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                                    {totalQuantity}
+                                </span>
+                            )}
+                        </div>
+
+                        {/* DROPDOWN CART */}
+                        {openCart && (
+                            <div className="absolute right-0 mt-3 w-[400px] bg-white shadow-lg rounded-lg p-3 z-50">
+                                <ShoppingCart />
+                            </div>
                         )}
                     </div>
                 </div>
