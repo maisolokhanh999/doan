@@ -7,8 +7,8 @@ import './Home.css';
 const Home = ({ products }) => {
     return (
         <div className="home-container">
-  <Product products={products} />
-          <ServicePackage />
+            <Product products={products} />
+            <ServicePackage />
         </div>
     );
 };

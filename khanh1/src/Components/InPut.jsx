@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, } from 'react';
+import { useNavigate } from 'react-router';
 import ProductCost from './ProductCost.jsx';
 const SearchBar = ({ products, onSelect }) => {
   const [keyword, setKeyword] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-
+  const navigate = useNavigate();
   // debounce (tránh lag khi gõ)
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,10 +24,10 @@ const SearchBar = ({ products, onSelect }) => {
   }, [keyword, products]);
 
   const handleSelect = (product) => {
-  setKeyword('');
-  setSuggestions([]);
-  onSelect(product); // 🔥 chỉ gửi ra ngoài
-};
+    setKeyword('');
+    setSuggestions([]);
+    navigate(`/product/${product.id}`); // 🔥 chỉ gửi ra ngoài
+  };
   return (
     <div className="relative w-full mb-6">
       {/* input */}
