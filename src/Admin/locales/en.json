@@ -1,0 +1,236 @@
+{
+  "sidebar": {
+    "brand_title": "Velvet Bloom",
+    "brand_subtitle": "Digital Sanctuary",
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "services": "Services",
+    "products": "Products",
+    "staff": "Staff",
+    "book_appointment": "Book Appointment",
+    "help_center": "Help Center",
+    "sign_out": "Sign Out"
+  },
+  "topbar": {
+    "brand_title": "Velvet Bloom",
+    "search_placeholder": "Search..."
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "vietnamese": "Tiếng Việt"
+  },
+  "dashboard": {
+    "welcome_title": "Good Morning, Elena",
+    "welcome_subtitle": "Your sanctuary is flourishing today. You have 12 appointments scheduled.",
+    "metrics": {
+      "total_appointments": "Total Appointments",
+      "appointments_trend": "Current month vs last month",
+      "monthly_revenue": "Monthly Revenue",
+      "revenue_trend": "Projected growth trend: Stable",
+      "new_customers": "New Customers",
+      "customers_trend": "New registrations this week"
+    },
+    "appointments": {
+      "title": "Today's Appointments",
+      "view_all": "View Schedule",
+      "cols": {
+        "time": "Time",
+        "client": "Client Name",
+        "service": "Service",
+        "staff": "Staff",
+        "status": "Status",
+        "action": "Action"
+      },
+      "status_confirmed": "Confirmed",
+      "status_progress": "In Progress",
+      "status_pending": "Pending",
+      "status_completed": "Completed"
+    },
+    "promo": {
+      "badge": "Trend Alert",
+      "title": "Lavender Aromatherapy is trending this week.",
+      "desc": "Consider offering a bundle for frequent clients to increase retention by 15%.",
+      "btn": "Create Campaign"
+    },
+    "charts": {
+      "title": "Service Distribution",
+      "massage": "Massage Therapy",
+      "facial": "Facial Treatments",
+      "stone": "Stone Therapy"
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "subtitle": "Manage your sanctuary's flow for today.",
+    "new_appointment": "New Appointment",
+    "calendar_title": "September 2024",
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "table": {
+      "time": "Time",
+      "client": "Client",
+      "service": "Service",
+      "specialist": "Specialist",
+      "status": "Status"
+    },
+    "client_types": {
+      "first_time": "First-time visitor",
+      "vip": "VIP Member",
+      "regular": "Regular",
+      "referred": "Referred by Staff"
+    },
+    "duration_mins": "mins",
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "completed": "Completed"
+    },
+    "view_all": "View all appointments",
+    "stats": {
+      "capacity_label": "Today's Capacity",
+      "capacity_meta": "+12% vs last Wed",
+      "pending_label": "Pending Requests",
+      "pending_meta": "Average wait: 2h",
+      "staff_label": "Staff Availability",
+      "staff_meta": "Specialists on duty"
+    },
+    "form": {
+      "client_name": "Client Name",
+      "time": "Time (e.g. 10:00 AM)",
+      "duration": "Duration (min)",
+      "service_name": "Service Name",
+      "specialist_name": "Specialist Name",
+      "cancel": "Cancel",
+      "add_btn": "Add Appointment"
+    }
+  },
+  "services": {
+    "page_subtitle": "Curated Offerings",
+    "page_title": "Service Management",
+    "add_new": "Add New Service",
+    "stats": {
+      "active": "Active Services",
+      "avg_price": "Avg. Price",
+      "categories": "Categories"
+    },
+    "categories": {
+      "facial": "Facial Spa",
+      "massage": "Massages",
+      "body": "Body Treatments"
+    },
+    "meta": {
+      "duration": "mins",
+      "bestseller": "Bestseller",
+      "premium": "Premium",
+      "draft": "Draft",
+      "highly_rated": "Highly Rated",
+      "luxury": "Luxury"
+    },
+    "add_card": {
+      "title": "New Service in Category",
+      "desc": "Add a specific massage offering"
+    },
+    "footer": {
+      "text": "Showing 7 of 24 active services across 3 categories.",
+      "export": "Export Catalog",
+      "bulk": "Bulk Visibility"
+    },
+    "edit_service": "Edit Service",
+    "confirm_delete": "Are you sure you want to delete this service?",
+    "form": {
+      "title": "Service Title",
+      "desc": "Description",
+      "image": "Image URL",
+      "price": "Price ($)",
+      "duration": "Duration (mins)",
+      "category": "Category",
+      "status": "Status",
+      "badge": "Badge (e.g. bestseller)",
+      "cancel": "Cancel",
+      "add_btn": "Add",
+      "save_btn": "Save"
+    }
+  },
+  "staff": {
+    "page_title": "The Collective",
+    "page_subtitle": "Nurture the heart of Velvet Bloom. Manage your dedicated team of wellness artisans and specialists.",
+    "add_member": "Add Staff Member",
+    "stats": {
+      "active": "Active Specialists",
+      "active_meta": "+2 This Month",
+      "rating": "Team Rating",
+      "on_shift": "On Shift Today"
+    },
+    "directory": {
+      "title": "Staff Directory",
+      "filter_all": "All Staff",
+      "filter_therapists": "Therapists",
+      "filter_technicians": "Technicians"
+    },
+    "card": {
+      "shift_on": "On Shift",
+      "shift_break": "On Break",
+      "shift_off": "Off Duty",
+      "see_schedule": "See Schedule",
+      "details": "Details"
+    },
+    "performance": {
+      "title": "Team Momentum",
+      "desc": "Performance metrics across the collective over the last 30 days.",
+      "star_performer": "Star Performer",
+      "star_bookings": "114 Bookings this month",
+      "efficiency": "Efficiency",
+      "view_data": "View Performance Data"
+    },
+    "form": {
+      "name": "Name",
+      "role": "Role",
+      "skills": "Skills (comma separated)",
+      "avatar": "Avatar URL (e.g. /img/6461739.jpg)",
+      "shift_on": "On Shift",
+      "shift_off": "Off Shift",
+      "shift_break": "Break",
+      "cancel": "Cancel",
+      "add_btn": "Add Staff"
+    }
+  },
+  "products": {
+    "page_title": "Inventory & Products",
+    "page_subtitle": "Manage your exclusive spa products and retail inventory.",
+    "add_product": "Add Product",
+    "stats": {
+      "total": "Total Products",
+      "categories": "Categories",
+      "low_stock": "Low Stock"
+    },
+    "card": {
+      "brand": "Brand",
+      "category": "Category",
+      "price": "Price",
+      "rating": "Rating",
+      "stock": "Stock",
+      "add_cart": "Add to Cart",
+      "details": "Details"
+    },
+    "edit_product": "Edit Product",
+    "confirm_delete": "Are you sure you want to delete this product?",
+    "form": {
+      "title": "Product Title",
+      "desc": "Description",
+      "image": "Thumbnail URL",
+      "price": "Price",
+      "stock": "Stock",
+      "cancel": "Cancel",
+      "add_btn": "Add",
+      "save_btn": "Save"
+    }
+  }
+}
