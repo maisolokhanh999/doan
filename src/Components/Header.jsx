@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext.jsx';
+import { useCart } from './useCart.js';
 import SearchBar from './InPut.jsx';
 import ProductCost from './ProductCost.jsx';
 import { useState } from 'react';

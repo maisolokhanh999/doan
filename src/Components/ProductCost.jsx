@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCart } from './CartContext.jsx';
+import { useCart } from './useCart';
 import { message } from 'antd';
 
 const ProductCost = ({ product, onBack }) => {

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Orders = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 

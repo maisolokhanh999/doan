@@ -1,8 +1,8 @@
-import { useCart } from "./CartContext.jsx";
+import { useCart } from "./useCart";
 import "./ShoppingCart.css";
 import { message } from "antd";
 import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 const ShoppingCart = () => {
   const {
     cart,
