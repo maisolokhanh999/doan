@@ -27,7 +27,7 @@ const Staff = () => {
     const nextShift = shifts[(shifts.indexOf(member.shift) + 1) % shifts.length];
     
     try {
-      const res = await fetch(`http://localhost:5000/staff/${member.id}`, {
+      const res = await fetch(`http://localhost:5001/staff/${member.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ shift: nextShift })
@@ -41,7 +41,7 @@ const Staff = () => {
   const handleDeleteStaff = async (id) => {
     if (window.confirm(t('staff.confirm_delete', 'Are you sure you want to remove this staff member?'))) {
       try {
-        await fetch(`http://localhost:5000/staff/${id}`, { method: 'DELETE' });
+        await fetch(`http://localhost:5001/staff/${id}`, { method: 'DELETE' });
         setStaff(staff.filter(s => s.id !== id));
       } catch (err) { console.error(err); }
     }
@@ -62,7 +62,7 @@ const Staff = () => {
     };
     
     try {
-      const res = await fetch('http://localhost:5000/staff', {
+      const res = await fetch('http://localhost:5001/staff', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(staffData)
@@ -79,7 +79,7 @@ const Staff = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/staff')
+    fetch('http://localhost:5001/staff')
       .then(res => res.json())
       .then(stfData => {
         setStaff(stfData);

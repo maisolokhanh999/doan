@@ -1,13 +1,11 @@
-import { NavLink,useNavigate} from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import { useCart } from './CartContext.jsx';
 import SearchBar from './InPut.jsx';
 import ProductCost from './ProductCost.jsx';
 import { useState } from 'react';
-import ShoppingCart from './ShoppingCart.jsx';
 const Header = ({ products }) => {
     const navigate = useNavigate();
     const { totalQuantity, } = useCart();
-    const [openCart, setOpenCart] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const handleSelect = (product) => {
         setSelectedProduct(product);
@@ -19,11 +17,7 @@ const Header = ({ products }) => {
                     <ul>
                         <li>
                             <NavLink to="/" className="text-gray-600 hover:text-gray-800">
-<<<<<<< HEAD
-                                Home
-=======
                                 Trang Chủ
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                             </NavLink>
                         </li>
                     </ul>
@@ -38,16 +32,6 @@ const Header = ({ products }) => {
     }
     return (
         <>
-<<<<<<< HEAD
-            <header className="bg-amber-200 py-4">
-                <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-                    <nav>
-                        <ul className="flex space-x-4 gap-5">
-                            <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="/Product">Product</NavLink></li>
-                            <li><NavLink to="/ServicePackage">ServicePackage</NavLink></li>
-                            <li><NavLink to="/Login">Login</NavLink></li>
-=======
             <header className="bg-primary-light py-4 shadow-sm">
                 <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
                     <nav>
@@ -67,7 +51,6 @@ const Header = ({ products }) => {
                             ) : (
                                 <li><NavLink to="/Login">Đăng Nhập</NavLink></li>
                             )}
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                         </ul>
                     </nav>
 

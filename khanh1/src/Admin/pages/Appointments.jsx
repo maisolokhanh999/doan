@@ -44,7 +44,7 @@ const Appointments = () => {
     const nextStatus = statuses[nextStatusIndex];
 
     try {
-      const res = await fetch(`http://localhost:5000/appointments/${apt.id}`, {
+      const res = await fetch(`http://localhost:5001/appointments/${apt.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: nextStatus })
@@ -58,7 +58,7 @@ const Appointments = () => {
   const handleDeleteApt = async (id) => {
     if (window.confirm(t('appointments.confirm_delete', 'Are you sure you want to delete this appointment?'))) {
       try {
-        await fetch(`http://localhost:5000/appointments/${id}`, { method: 'DELETE' });
+        await fetch(`http://localhost:5001/appointments/${id}`, { method: 'DELETE' });
         setAppointments(appointments.filter(a => a.id !== id));
       } catch (err) { console.error(err); }
     }
@@ -96,7 +96,7 @@ const Appointments = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/appointments', {
+      const res = await fetch('http://localhost:5001/appointments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(aptData)
@@ -114,9 +114,9 @@ const Appointments = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://localhost:5000/appointments').then(res => res.json()),
-      fetch('http://localhost:5000/staff').then(res => res.json()),
-      fetch('http://localhost:5000/services').then(res => res.json())
+      fetch('http://localhost:5001/appointments').then(res => res.json()),
+      fetch('http://localhost:5001/staff').then(res => res.json()),
+      fetch('http://localhost:5001/services').then(res => res.json())
     ]).then(([aptData, staffData, srvData]) => {
       setAppointments(aptData);
       setStaffList(staffData);

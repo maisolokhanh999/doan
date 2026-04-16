@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { useCart } from './CartContext.jsx';
-<<<<<<< HEAD
-=======
 import { message } from 'antd';
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
 
 const ProductCost = ({ product, onBack }) => {
   const [quantity, setQuantity] = useState(1);
@@ -11,11 +8,7 @@ const ProductCost = ({ product, onBack }) => {
 
   const handleAddToCart = () => {
     addToCart(product, parseInt(quantity, 10) || 1);
-<<<<<<< HEAD
-    alert(`Added ${quantity} ${product.title} to the cart!`);
-=======
     message.success(`Đã thêm ${quantity} ${product.title} vào giỏ hàng!`);
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
   };
 
   return (
@@ -39,21 +32,12 @@ const ProductCost = ({ product, onBack }) => {
             </div>
             
             <div className="lg:w-1/2 lg:p-12 p-8">
-<<<<<<< HEAD
-              <h1 className="text-4xl font-bold mb-6 text-gray-800">{product.title}</h1>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">{product.description}</p>
-              
-              <div className="mb-10">
-                <div className="space-y-4 mb-8">
-                  <p className="text-5xl font-bold text-red-500">${product.price}</p>
-=======
               <h1 className="text-4xl font-bold mb-6 text-primary">{product.title}</h1>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed font-sans">{product.description}</p>
               
               <div className="mb-10">
                 <div className="space-y-4 mb-8">
                   <p className="text-5xl font-bold text-primary">${product.price}</p>
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                   <div className="flex items-center space-x-4">
                     <span className="text-2xl text-yellow-400">⭐ {product.rating}</span>
                     <span className="text-xl text-gray-700 font-semibold">
@@ -75,11 +59,7 @@ const ProductCost = ({ product, onBack }) => {
                       type="number"
                       value={quantity}
                       onChange={(e) => setQuantity(Math.max(0, Math.min(product.stock, parseInt(e.target.value) || 0)))}
-<<<<<<< HEAD
-                      className="w-24 text-center p-3 text-2xl font-bold border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
-=======
                       className="w-24 text-center p-3 text-2xl font-bold border-2 border-outline-variant rounded-xl focus:border-primary focus:outline-none"
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                       min="0"
                       max={product.stock}
                     />
@@ -95,15 +75,9 @@ const ProductCost = ({ product, onBack }) => {
 
               <button
                 onClick={handleAddToCart}
-<<<<<<< HEAD
-                className="w-full py-5 px-8 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                🛒 Add to cart
-=======
                 className="w-full py-5 px-8 bg-gradient-to-r from-primary to-secondary hover:bg-primary-light text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 🛒 Thêm vào giỏ hàng
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
               </button>
             </div>
           </div>

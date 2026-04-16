@@ -8,7 +8,7 @@ const Orders = () => {
 
   const fetchOrders = () => {
     setLoading(true);
-    fetch('http://localhost:5000/orders')
+    fetch('http://localhost:5001/orders')
       .then(res => res.json())
       .then(data => setOrders(data))
       .catch(err => console.error('Failed to fetch orders:', err))
@@ -25,7 +25,7 @@ const Orders = () => {
     
     const updatedOrder = { ...orderToUpdate, status: newStatus };
     try {
-      const res = await fetch(`http://localhost:5000/orders/${id}`, {
+      const res = await fetch(`http://localhost:5001/orders/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedOrder)

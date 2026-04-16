@@ -1,24 +1,5 @@
 const ServicePackage = () => {
   return (
-<<<<<<< HEAD
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-8">Service Packages</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="border p-6 rounded">
-          <h3 className="font-bold text-xl mb-2">Basic Package</h3>
-          <p>$49/mo</p>
-          <ul className="mt-4">
-            <li>• Basic support</li>
-            <li>• 1 user</li>
-          </ul>
-        </div>
-        <div className="border p-6 rounded">
-          <h3 className="font-bold text-xl mb-2">Premium Package</h3>
-          <p>$99/mo</p>
-          <ul className="mt-4">
-            <li>• Premium support</li>
-            <li>• Unlimited users</li>
-=======
     <div className="container mx-auto py-12 px-6">
       <h1 className="text-4xl font-serif font-bold mb-10 text-primary uppercase tracking-wider text-center">Các Gói Dịch Vụ</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -36,7 +17,6 @@ const ServicePackage = () => {
           <ul className="mt-4 space-y-2 text-gray-700 font-sans">
             <li>• Hỗ trợ ưu tiên</li>
             <li>• Truy cập không giới hạn</li>
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
           </ul>
         </div>
       </div>

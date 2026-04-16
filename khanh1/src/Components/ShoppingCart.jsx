@@ -13,7 +13,7 @@ const ShoppingCart = () => {
     clearCart,
     totalQuantity,
   } = useCart();
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -22,23 +22,14 @@ const ShoppingCart = () => {
 
   useEffect(() => {
     if (cart.length === 0) {
-<<<<<<< HEAD
-      message.warning("Shopping cart is empty!");
-=======
       message.warning("Giỏ hàng đang trống!");
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
       navigate("/");
     }
-  }, [cart]);
+  }, [cart, navigate]);
 
   return (
-<<<<<<< HEAD
-    <div className="ShoppingCart-container poppins-semibold ">
-      <h2 className="text-2xl font- mb-5">🛒 Shopping cart</h2>
-=======
     <div className="ShoppingCart-container font-sans">
       <h2 className="text-3xl font-serif font-bold mb-8 text-primary">🛒 Giỏ hàng của bạn</h2>
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
 
       {/* LIST PRODUCT */}
       {cart.map((item) => (
@@ -55,13 +46,8 @@ const ShoppingCart = () => {
             />
 
             <div>
-<<<<<<< HEAD
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="text-gray-500">${item.price}</p>
-=======
               <h3 className="font-semibold text-primary">{item.title}</h3>
               <p className="text-gray-500 font-sans">${item.price}</p>
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
             </div>
           </div>
 
@@ -99,15 +85,9 @@ const ShoppingCart = () => {
           {/* REMOVE */}
           <button
             onClick={() => removeFromCart(item.id)}
-<<<<<<< HEAD
-            className="text-red-500 font-bold"
-          >
-            X
-=======
             className="text-accent font-bold hover:scale-110 transition-transform"
           >
             ✕
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
           </button>
         </div>
       ))}
@@ -117,22 +97,6 @@ const ShoppingCart = () => {
         <p className="text-lg">
           Tổng sản phẩm: <strong>{totalQuantity}</strong>
         </p>
-<<<<<<< HEAD
-        <p className="text-xl font-bold">
-          Tổng tiền: ${totalPrice.toFixed(2)}
-        </p>
-
-        <div className="mt-4 flex gap-3">
-          <button
-            onClick={clearCart}
-            className="px-4 py-2 bg-red-500 text-white rounded"
-          >
-            Xóa tất cả
-          </button>
-
-          <button className="px-4 py-2 bg-green-500 text-white rounded">
-            Thanh toán
-=======
         <p className="text-xl font-bold text-primary font-serif">
           Tổng tiền: ${totalPrice.toFixed(2)}
         </p>
@@ -168,7 +132,7 @@ const ShoppingCart = () => {
                   status: 'pending'
                 };
 
-                fetch('http://localhost:5000/orders', {
+                fetch('http://localhost:5001/orders', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(payload)
@@ -185,7 +149,6 @@ const ShoppingCart = () => {
             }}
           >
             💳 Thanh toán ngay
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
           </button>
         </div>
       </div>

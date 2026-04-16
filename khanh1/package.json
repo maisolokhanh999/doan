@@ -4,12 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-=======
     "dev": "concurrently \"vite\" \"npm run api\"",
-    "api": "json-server --watch db.json --port 5000",
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
+    "api": "json-server --watch db.json --port 5001",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,17 +13,11 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "antd": "^6.3.5",
-<<<<<<< HEAD
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.14.0",
-=======
     "i18next": "^25.10.9",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.0",
     "react-i18next": "^16.6.6",
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
@@ -35,18 +25,12 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
-<<<<<<< HEAD
-=======
     "concurrently": "^9.2.1",
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
-<<<<<<< HEAD
-=======
     "json-server": "^1.0.0-beta.15",
->>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
     "vite": "^8.0.1"
   }
 }

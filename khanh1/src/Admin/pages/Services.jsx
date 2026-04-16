@@ -14,7 +14,7 @@ const Services = () => {
   const [newSrv, setNewSrv] = useState({ title: '', description: '', category: 'facial', price: 0, duration: 60, image: '', status: 'published', badge: '' });
 
   useEffect(() => {
-    fetch('http://localhost:5000/services')
+    fetch('http://localhost:5001/services')
       .then(res => res.json())
       .then(srvData => {
         setServices(srvData);
@@ -31,7 +31,7 @@ const Services = () => {
   const handleDelete = async (id) => {
     if (window.confirm(t('services.confirm_delete', 'Are you sure you want to delete this service?'))) {
       try {
-        await fetch(`http://localhost:5000/services/${id}`, { method: 'DELETE' });
+        await fetch(`http://localhost:5001/services/${id}`, { method: 'DELETE' });
         setServices(services.filter(s => s.id !== id));
       } catch (err) { console.error(err); }
     }
@@ -41,7 +41,7 @@ const Services = () => {
     e.preventDefault();
     const payload = { ...newSrv, id: `srv-${Date.now()}`, price: Number(newSrv.price), duration: Number(newSrv.duration) };
     try {
-      const res = await fetch('http://localhost:5000/services', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+      const res = await fetch('http://localhost:5001/services', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
       if (res.ok) {
         setServices([...services, await res.json()]);
         setIsAddModalOpen(false);
@@ -53,7 +53,7 @@ const Services = () => {
     e.preventDefault();
     const payload = { ...editingService, price: Number(editingService.price), duration: Number(editingService.duration) };
     try {
-      const res = await fetch(`http://localhost:5000/services/${payload.id}`, { method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+      const res = await fetch(`http://localhost:5001/services/${payload.id}`, { method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
       if (res.ok) {
         const updated = await res.json();
         setServices(services.map(s => s.id === payload.id ? updated : s));

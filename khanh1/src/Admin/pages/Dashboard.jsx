@@ -11,9 +11,9 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         const [aptRes, staffRes, srvRes] = await Promise.all([
-          fetch('http://localhost:5000/appointments'),
-          fetch('http://localhost:5000/staff'),
-          fetch('http://localhost:5000/services')
+          fetch('http://localhost:5001/appointments'),
+          fetch('http://localhost:5001/staff'),
+          fetch('http://localhost:5001/services')
         ]);
         const aptData = await aptRes.json();
         const staffData = await staffRes.json();
