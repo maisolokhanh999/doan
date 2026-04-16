@@ -33,10 +33,17 @@ const SearchBar = ({ products, onSelect }) => {
       {/* input */}
       <input
         type="text"
+<<<<<<< HEAD
         placeholder="🔍 Find products..."
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
         className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+=======
+        placeholder="🔍 Tìm kiếm sản phẩm..."
+        value={keyword}
+        onChange={(e) => setKeyword(e.target.value)}
+        className="w-full p-4 text-lg border-2 border-outline-variant rounded-xl focus:border-primary focus:outline-none bg-surface"
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
       />
 
       {/* dropdown gợi ý */}

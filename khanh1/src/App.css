@@ -1,9 +1,26 @@
 @import "tailwindcss";
+<<<<<<< HEAD
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-primary: #7A5348;
+  --color-primary-light: #FFDBCE;
+  --color-secondary: #77574D;
+  --color-accent: #f08cae;
+}
+
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
 * {
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 body {
   font-family: 'poppins', sans-serif;
   background: white;
@@ -114,4 +131,15 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: italic;
+=======
+
+body {
+  font-family: var(--font-sans);
+  background: white;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
 }

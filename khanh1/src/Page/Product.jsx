@@ -4,6 +4,10 @@ import './Product.css';
 const Product = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+<<<<<<< HEAD
+=======
+  const [search, setSearch] = useState('');
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
   const productRef = useRef(null);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -39,6 +43,7 @@ const Product = ({ products }) => {
   }
 
   const safeProducts = products || [];
+<<<<<<< HEAD
   const filteredProducts = selectedCategory
     ? safeProducts.filter(item =>
       typeof selectedCategory === "string"
@@ -46,11 +51,24 @@ const Product = ({ products }) => {
         : item.category === selectedCategory.slug
     )
     : safeProducts;
+=======
+  const filteredProducts = safeProducts.filter(item => {
+    const matchesCategory = selectedCategory
+      ? (typeof selectedCategory === "string"
+          ? item.category === selectedCategory
+          : item.category === selectedCategory.slug)
+      : true;
+    const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
   return (
     <div className="product-container">
       <div className="max-w-7xl mx-auto p-6">
 
         {/* 🔥 TITLE */}
+<<<<<<< HEAD
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
           🛍️ band list
         </h1>
@@ -79,6 +97,43 @@ const Product = ({ products }) => {
               {category[0]?.toUpperCase() + category.slice(1)}
             </button>
           ))}
+=======
+        <h1 className="text-5xl font-serif font-bold mb-12 text-primary tracking-widest text-center uppercase drop-shadow-sm">BỘ SƯU TẬP MUA SẮM</h1>
+
+        {/* Search and Filter */}
+        <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6 bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${!selectedCategory ? 'bg-primary text-white shadow-lg' : 'bg-surface-variant text-primary hover:bg-primary-light'}`}
+            >
+              TẤT CẢ
+            </button>
+
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
+                    ? "bg-primary text-white shadow-lg"
+                    : "bg-surface-variant text-primary hover:bg-primary-light"
+                  }`}
+              >
+                {category[0]?.toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </div>
+          
+          <div className="flex items-center bg-surface-variant px-4 py-2 rounded-full border border-outline-variant w-full md:w-64">
+            <span className="material-symbols-outlined text-primary-light">search</span>
+            <input
+              type="text"
+              placeholder="Tìm kiếm sản phẩm..."
+              className="bg-transparent outline-none flex-1 text-primary placeholder:text-primary-light px-2"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
         </div>
 
         {/* 🔥 GRID */}
@@ -112,7 +167,11 @@ const Product = ({ products }) => {
 
                 {/* PRICE */}
                 <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                   <span className="text-red-500 font-bold text-xl">
+=======
+                  <span className="text-primary font-bold text-xl">
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                     ${item.price}
                   </span>
                   <span className="text-sm text-gray-400 line-through">

@@ -19,7 +19,11 @@ const Header = ({ products }) => {
                     <ul>
                         <li>
                             <NavLink to="/" className="text-gray-600 hover:text-gray-800">
+<<<<<<< HEAD
                                 Home
+=======
+                                Trang Chủ
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                             </NavLink>
                         </li>
                     </ul>
@@ -34,6 +38,7 @@ const Header = ({ products }) => {
     }
     return (
         <>
+<<<<<<< HEAD
             <header className="bg-amber-200 py-4">
                 <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
                     <nav>
@@ -42,6 +47,27 @@ const Header = ({ products }) => {
                             <li><NavLink to="/Product">Product</NavLink></li>
                             <li><NavLink to="/ServicePackage">ServicePackage</NavLink></li>
                             <li><NavLink to="/Login">Login</NavLink></li>
+=======
+            <header className="bg-primary-light py-4 shadow-sm">
+                <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+                    <nav>
+                        <ul className="flex space-x-4 gap-5">
+                            <li><NavLink to="/">Trang Chủ</NavLink></li>
+                            <li><NavLink to="/Product">Sản Phẩm</NavLink></li>
+                            <li><NavLink to="/ServicePackage">Gói Dịch Vụ</NavLink></li>
+                            {localStorage.getItem('token') ? (
+                                <li>
+                                    <a href="#" onClick={(e) => {
+                                        e.preventDefault();
+                                        localStorage.removeItem('token');
+                                        localStorage.removeItem('user');
+                                        navigate('/Login');
+                                    }}>Đăng Xuất ({JSON.parse(localStorage.getItem('user') || '{}').name || 'Người dùng'})</a>
+                                </li>
+                            ) : (
+                                <li><NavLink to="/Login">Đăng Nhập</NavLink></li>
+                            )}
+>>>>>>> a68659edddd68b2900b60e8bc119f559abc8694a
                         </ul>
                     </nav>
 
