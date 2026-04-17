@@ -1,3 +1,4 @@
+=======
 # Logs
 logs
 *.log
@@ -32,3 +33,5 @@ browser
 *.png
 *.jpg
 *.jpeg
+=======
+>>>>>>> 6c24e71d4cd8999ebe177a917c15c7a59b5a8e8a
