@@ -1,22 +1,21 @@
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+
 
 const Orders = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchOrders = () => {
-    setLoading(true);
-    fetch('http://localhost:5001/orders')
-      .then(res => res.json())
-      .then(data => setOrders(data))
-      .catch(err => console.error('Failed to fetch orders:', err))
-      .finally(() => setLoading(false));
-  };
-
   useEffect(() => {
-    fetchOrders();
+    const fetchOrdersData = () => {
+      setLoading(true);
+      fetch('http://localhost:5001/orders')
+        .then(res => res.json())
+        .then(data => setOrders(data))
+        .catch(err => console.error('Failed to fetch orders:', err))
+        .finally(() => setLoading(false));
+    };
+    fetchOrdersData();
   }, []);
 
   const handleUpdateStatus = async (id, newStatus) => {

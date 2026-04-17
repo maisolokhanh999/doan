@@ -15,10 +15,10 @@ const Sidebar = () => {
           <span className="material-symbols-outlined nav-icon" data-icon="dashboard">dashboard</span>
           <span className="nav-text">{t('sidebar.dashboard')}</span>
         </NavLink>
-        <NavLink to="/admin/appointments" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        {/* <NavLink to="/admin/appointments" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="material-symbols-outlined nav-icon" data-icon="calendar_month">calendar_month</span>
           <span className="nav-text">{t('sidebar.appointments')}</span>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/admin/services" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="material-symbols-outlined nav-icon" data-icon="spa">spa</span>
           <span className="nav-text">{t('sidebar.services')}</span>
@@ -31,16 +31,16 @@ const Sidebar = () => {
           <span className="material-symbols-outlined nav-icon" data-icon="receipt_long">receipt_long</span>
           <span className="nav-text">{t('sidebar.orders')}</span>
         </NavLink>
-        <NavLink to="/admin/staff" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        {/* <NavLink to="/admin/staff" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="material-symbols-outlined nav-icon" data-icon="group">group</span>
           <span className="nav-text">{t('sidebar.staff')}</span>
-        </NavLink>
+        </NavLink> */}
       </nav>
-      <div className="sidebar-action">
+      {/* <div className="sidebar-action">
         <button className="btn btn-primary btn-block">
           {t('sidebar.book_appointment')}
         </button>
-      </div>
+      </div> */}
       <div className="sidebar-footer">
         <a className="footer-link" href="#">
           <span className="material-symbols-outlined" data-icon="help">help</span>
