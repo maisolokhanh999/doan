@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const value = useMemo(() => {
-    const addToCart = (product, quantity = 0) => {
+    const addToCart = (product, quantity = 1) => {
       const qty = Number.isFinite(quantity) ? quantity : parseInt(quantity, 10) || 1;
       if (qty <= 0) return; // 🔥 không thêm nếu = 0
 
