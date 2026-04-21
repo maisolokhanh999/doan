@@ -17,10 +17,9 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'vi', // default language
-    fallbackLng: 'vi',
+    lng: 'vi',
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
   });
 

@@ -1,8 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Sidebar = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/');
+  };
 
   return (
     <aside className="sidebar" id="sidebar">
@@ -46,7 +54,7 @@ const Sidebar = () => {
           <span className="material-symbols-outlined" data-icon="help">help</span>
           <span className="footer-text">{t('sidebar.help_center')}</span>
         </a>
-        <a className="footer-link" href="#">
+        <a className="footer-link" href="#" onClick={handleLogout}>
           <span className="material-symbols-outlined" data-icon="logout">logout</span>
           <span className="footer-text">{t('sidebar.sign_out')}</span>
         </a>

@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Page/Home';
@@ -30,9 +30,12 @@ function App() {
       .then(data => setProducts(data.products))
       .catch(err => console.log(err));
   }, []);
+  const location = useLocation();
+  const isAdminPath = location.pathname.startsWith('/admin');
+
   return (
     <div className="flex flex-col min-h-screen  ">
-      <Header products={products} />
+      {!isAdminPath && <Header products={products} />}
 
       <main className="flex-1">
         <Routes>
@@ -60,7 +63,7 @@ function App() {
           </Route>
         </Routes>
       </main>
-      <Footer />
+      {!isAdminPath && <Footer />}
     </div>
   );
 }
